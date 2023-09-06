@@ -1,0 +1,33 @@
+
+
+def recursive_sum(arr):
+    if len(arr) == 0:
+        return 0
+    return arr[0] + recursive_sum(arr[1:])
+
+
+r_array = [1,2,2,3,6,5]
+result = recursive_sum(r_array)
+print(result)
+
+
+def recursive_count(arr):
+    if not arr:
+        return 0    
+    return 1 + recursive_count(arr[1:])
+
+a_array = [1,2,3,4,5,6,7,8,9]
+print ( recursive_count(a_array))
+
+def recursive_max(arr):
+    if len(arr) == 1:
+        return arr[0]
+    else:
+        max = recursive_max(arr[1:])
+        if arr[0] > max:
+            return arr[0]
+        else:
+            return max   
+m_arry = [3,65,3,3,4,9,0,7,5,44]
+print(recursive_max(m_arry))
+
